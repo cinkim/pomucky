@@ -1,0 +1,32 @@
+
+" řetězce
+zfill(2) # přidá před řetězec "0" do počtu
+
+
+# soubory
+encoding="cp1250" # kodování windows
+mode="wb" # zapsání jako binární data
+
+import pathlib
+csv_files = (list(pathlib.Path(...cesta k souborům...).glob('*.csv'))) # načte do proměnné seznam souborů s danou příponou
+
+with open(csv_file, encoding='cp1250') as csv_data:  # načtení csv souborů
+    csvreader = csv.reader(csv_data, delimiter=';') 
+
+
+# vykreslení grafu 
+import matplotlib.pyplot as plt
+plt.plot([1, 9, 56, 3, 8]) # údaje pro vykreslení křivky
+plt.title("Moje data") # pojmenování grafu
+plt.show() # vykreslení
+
+# načítání souborů z netu
+import requests
+url = "https://github.com/Mintaka/mypyladies_sqlite/blob/main/process_meteo_data.py"
+r = requests.get(url, allow_redirects=True)
+
+# rozbalení zipů
+import zipfile
+with zipfile.ZipFile(...cesta a název souboru..., 'r') as zip_ref:
+    zip_ref.extractall(...cesta pro rozbalený soubor...)
+	
