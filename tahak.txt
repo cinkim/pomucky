@@ -30,3 +30,8 @@ import zipfile
 with zipfile.ZipFile(...cesta a název souboru..., 'r') as zip_ref:
     zip_ref.extractall(...cesta pro rozbalený soubor...)
 	
+# prvni poslani na github
+založit na githabu uloziste(idealne stejny nazev jako ve zdrojovem pc)
+do cmd zadat
+git remote add origin https://...cesta k uložišti...
+git branch -M main/process_meteo_datagit push -u origin main/process_meteo_datagit
