@@ -1,11 +1,23 @@
 import os
 from time import asctime
+import csv
+import requests
 
 def info():
     print("""pristup-načte ze systému win uživatele a aktualni datum a čas,
-           přebírá argument cesty pro zápis a údaj zapíše do souboru,
+           funkce přebírá argument 'cesta_logu' pro zápis a údaj zapíše do souboru,
            funkce nic nevrací\n""")
-    print("""vytvor_struktur_adresaru-vytvoří adresářovou strukturu na zadané cestě""")
+    print()
+    print("""vytvor_struktur_adresaru-vytvoří adresářovou strukturu na zadané cestě
+            funkce přebírá argument 'folders' což je seznam adresářů v proměnných
+            s odkazem na zadanou cestu""")
+    print()
+    print("""nacti_z_netu-načítá a ukládá soubory z netu pomocí knihovny reguests
+           funkce má 2 argumenty 'url' a 'vystup' což jsou vstupní a výstupní cesty""")
+
+def nacti_z_netu(url, vystup):
+    r = requests.get(url, allow_redirects=True)
+    open(vystup, 'wb').write(r.content)
 
 def pristup(self, cesta_logu):
     """načte uživatele, datum a čas-udaje zapíše do souboru"""
