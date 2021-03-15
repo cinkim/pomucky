@@ -36,3 +36,6 @@ založit na githabu uloziste(idealne stejny nazev jako ve zdrojovem pc)
 do cmd zadat
 git remote add origin https://...cesta k uložišti...
 git branch -M main/process_meteo_datagit push -u origin main/process_meteo_datagit
+nastavení pro proxy server
+git config --global http.proxy http://uzivatelske jmeno:heslo@ip proxy:port
+git config --global http.sslverify false
