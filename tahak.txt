@@ -1,4 +1,4 @@
-
+﻿
 " řetězce
 zfill(2) # přidá před řetězec "0" do počtu
 
@@ -20,16 +20,21 @@ plt.plot([1, 9, 56, 3, 8]) # údaje pro vykreslení křivky
 plt.title("Moje data") # pojmenování grafu
 plt.show() # vykreslení
 
+
 # načítání a uložení souborů z netu
 import requests
 url = "https://github.com/Mintaka/mypyladies_sqlite/blob/main/process_meteo_data.py"
 r = requests.get(url, allow_redirects=True)
 open(...cesta/nazev_souboru..., 'wb').write(r.content)
 
+
+
 # rozbalení zipů
 import zipfile
 with zipfile.ZipFile(...cesta a název souboru..., 'r') as zip_ref:
     zip_ref.extractall(...cesta pro rozbalený soubor...)
+	
+	
 	
 # prvni poslani na github
 založit na githabu uloziste(idealne stejny nazev jako ve zdrojovem pc)
@@ -39,3 +44,9 @@ git branch -M main/process_meteo_datagit push -u origin main/process_meteo_datag
 nastavení pro proxy server
 git config --global http.proxy http://uzivatelske jmeno:heslo@ip proxy:port
 git config --global http.sslverify false
+
+Token: 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
+
+
+# import win32api
+pip install pypiwin32
